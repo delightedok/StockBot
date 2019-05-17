@@ -28,6 +28,8 @@ class NetUtils:
         retry = 0
         ret = dict()
         resp = None
+        if head is None:
+            head = dict()
         while retry < 3:
             try:
                 req = urllib.request.Request(url, data=data, headers=head, method=method)
