@@ -82,3 +82,7 @@ class NetUtils:
         else:
             value = None
         return value
+
+    @staticmethod
+    def decode(html_raw, charset='gbk'):
+        return html_raw.decode(charset)
