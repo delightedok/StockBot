@@ -23,5 +23,20 @@ class DBHandler:
     def select(self, table, where=None, limit=None):
         return self.instance.select(table, where, limit)
 
+    def insert(self, table, data_list):
+        return self.instance.insert(table, data_list)
+
+    def update(self, table, where, values):
+        return self.instance.update(table, where, values)
+
+    def delete(self, table, where):
+        return self.instance.delete(table, where)
+
+    def clear(self, table):
+        return self.instance.clear(table)
+
+    def create(self, sql_create):
+        return self.instance.create(sql_create)
+
     def disconnect(self):
         self.instance.disconnect()
