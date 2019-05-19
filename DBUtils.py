@@ -26,8 +26,8 @@ class DBHandler:
     def insert(self, table, data_list):
         return self.instance.insert(table, data_list)
 
-    def update(self, table, where, values):
-        return self.instance.update(table, where, values)
+    def update(self, table, values, where=None):
+        return self.instance.update(table, values, where)
 
     def delete(self, table, where):
         return self.instance.delete(table, where)
